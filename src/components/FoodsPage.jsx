@@ -1,5 +1,3 @@
-
-
 function FoodsPage({
   floatStyle,
   setFloatStyle,
@@ -10,10 +8,11 @@ function FoodsPage({
 }) {
   function handleChangeLayout(value) {
     if (value === "flex-layout") {
+      setFloatStyle("float-bottom");
       setCurrentLayout(value);
       setLayoutName("Flexbox Sidebar");
     } else if (value === "float-bottom") {
-      setFloatStyle(value);
+      setFloatStyle("float-bottom");
       setCurrentLayout("");
       setLayoutName("Floated Sidebar");
     } else {

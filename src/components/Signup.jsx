@@ -131,8 +131,8 @@ function Signup() {
         </fieldset>
 
         <div className="btn">
-          <button type="reset">Reset</button>
           <button type="submit">Signup</button>
+          <button type="reset">Reset</button>
         </div>
       </form>
     </main>

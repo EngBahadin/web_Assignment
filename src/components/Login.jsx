@@ -23,8 +23,8 @@ function Login() {
             required
           />
           <div className="btn">
+            <a href="##">Forgot Password?</a>
             <button type="submit">Signin</button>
-            <a href="#">Forgot Password?</a>
           </div>
         </form>
       </section>

@@ -161,7 +161,7 @@ cursor: pointer;
 
 .carousel-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -172,13 +172,13 @@ cursor: pointer;
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background-color: #fff;
+ background-color: #4c4c4d;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: #4c4c4d;
+   background-color: #8e5c11;
 }
 
 .buttons {
@@ -267,13 +267,13 @@ div > span {
 
 
 
-
-
 img{
   object-fit: contain;
 }
 
-
+.layout-container>div>div>img{
+  
+}
 
 
 /* goods page  */
@@ -393,8 +393,9 @@ img{
 }
 
 .signup-form h2 {
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
+
 }
 
 .signup-form label {

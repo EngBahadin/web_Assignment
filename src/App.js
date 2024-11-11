@@ -21,9 +21,10 @@ function App() {
     setCurrentPage("foods");
     if (value === "flex-layout") {
       setCurrentLayout(value);
+      setFloatStyle("float-bottom");
       setLayoutName("Flexbox Sidebar");
     } else if (value === "float-bottom") {
-      setFloatStyle(value);
+      setFloatStyle("float-bottom");
       setCurrentLayout("");
       setLayoutName("Floated Sidebar");
     } else {
@@ -120,9 +121,7 @@ function App() {
           setLayoutName={setLayoutName}
         />
       )}
-      {currentPage === "home" && (
-        <HomePage onNavigation={handleNavigation} />
-      )}
+      {currentPage === "home" && <HomePage onNavigation={handleNavigation} />}
       {currentPage === "schedule" && <Schedule />}
       {currentPage === "signup" && <Signup />}
       {currentPage === "login" && <Login />}
