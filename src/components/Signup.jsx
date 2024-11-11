@@ -1,12 +1,10 @@
-import React from 'react'
-
 function Signup() {
   return (
     <main>
       <form className="signup-form">
         <h2>Signup Form</h2>
 
-        <label for="username">Username</label>
+        <label htmlFor="username">Username</label>
         <input
           type="text"
           id="username"
@@ -15,7 +13,7 @@ function Signup() {
           required
         />
 
-        <label for="full-name">Full Name</label>
+        <label htmlFor="full-name">Full Name</label>
         <input
           type="text"
           id="full-name"
@@ -24,7 +22,7 @@ function Signup() {
           required
         />
 
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           id="email"
@@ -33,15 +31,15 @@ function Signup() {
           required
         />
 
-        <label for="telephone">Telephone</label>
+        <label htmlFor="telephone">Telephone</label>
         <input
           type="tel"
           id="telephone"
           name="telephone"
-          placeholder="0964 000 000 00 00"
+          placeholder="0964 000 000 00"
         />
 
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           id="password"
@@ -50,16 +48,26 @@ function Signup() {
           required
         />
 
-        <label for="dob">Date of Birth</label>
+        <label htmlFor="dob">Date of Birth</label>
         <input type="date" id="dob" name="dob" />
 
-        <label for="profile-color">Profile Color</label>
-        <input type="color" placeholder="red" id="" name="profile-color" />
+        <label htmlFor="profile-color">Profile Color</label>
+        <input
+          type="color"
+          id="profile-color"
+          name="profile-color"
+          placeholder="red"
+        />
 
         <fieldset>
           <legend>Marital Status</legend>
           <label>
-            <input type="radio" name="marital-status" value="single" checked />
+            <input
+              type="radio"
+              name="marital-status"
+              value="single"
+              defaultChecked
+            />
             Single
           </label>
           <label>
@@ -72,7 +80,7 @@ function Signup() {
           </label>
         </fieldset>
 
-        <label for="children">Nom. of Children</label>
+        <label htmlFor="children">Number of Children</label>
         <select id="children" name="children">
           <option value="none">None</option>
           <option value="1">1</option>
@@ -81,7 +89,7 @@ function Signup() {
           <option value="4">4</option>
         </select>
 
-        <label for="degree">Choose your Degrees</label>
+        <label htmlFor="degree">Choose your Degrees</label>
         <select id="degree" name="degree" multiple>
           <option value="diploma">Diploma</option>
           <option value="bsc">Bachelor of Science (BSc)</option>
@@ -90,21 +98,20 @@ function Signup() {
           <option value="msc">Master of Science (MSc)</option>
         </select>
 
-        <label for="about">About Yourself</label>
+        <label htmlFor="about">About Yourself</label>
         <textarea
           id="about"
           name="about"
           placeholder="About Yourself"
         ></textarea>
 
-        <label for="cv">Upload your CV</label>
-        <div className="filee">
-          <input type="file" id="cv" name="cv" />
-        </div>
+        <label htmlFor="cv">Upload your CV</label>
+        <input type="file" id="cv" name="cv" />
+
         <fieldset>
           <legend>Gender</legend>
           <label>
-            <input type="radio" name="gender" value="male" checked />
+            <input type="radio" name="gender" value="male" defaultChecked />
             Male
           </label>
           <label>
@@ -122,13 +129,14 @@ function Signup() {
             <input type="checkbox" name="agree" required /> Yes, I agree
           </label>
         </fieldset>
+
         <div className="btn">
-          <button type="submit">Signup</button>
           <button type="reset">Reset</button>
+          <button type="submit">Signup</button>
         </div>
       </form>
     </main>
   );
 }
 
-export default Signup
+export default Signup;

@@ -465,7 +465,11 @@ img{
 .signup-form button:hover {
   opacity: 0.8;
 }
-
+.btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 

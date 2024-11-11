@@ -22,9 +22,9 @@ function Login() {
             placeholder="Password"
             required
           />
-          <div className="kk">
-            <a href="#">Forgot Password?</a>
+          <div className="btn">
             <button type="submit">Signin</button>
+            <a href="#">Forgot Password?</a>
           </div>
         </form>
       </section>

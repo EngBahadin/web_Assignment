@@ -25,7 +25,7 @@ function FoodsPage({
 
   return (
     <main id="main-web-Page">
-      <h4 className="food-header">{layoutName} + Blogs</h4>
+      <h4 className="food-header">{layoutName} + Foods</h4>
       <div className="container">
         <div className={`layout-container ${currentLayout}`}>
           <div className="" id="topic-1">

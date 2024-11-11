@@ -1,8 +1,12 @@
-import React from "react";
 import { useState } from "react";
 
-function HomePage() {
-  const images = ["/kunafa.png", "/mahalabia.png", "/waffles.png","/pancake.png"];
+function HomePage({ onNavigation }) {
+  const images = [
+    "/kunafa.png",
+    "/mahalabia.png",
+    "/waffles.png",
+    "/pancake.png",
+  ];
 
   // State to track the current image index
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -64,16 +68,24 @@ function HomePage() {
       {/* Button section linking to various pages */}
       <div className="buttons">
         <div className="button-box custom-button">
-          <a href="/Blog.html">Blogs</a>
+          <a href="/Blog.html" onClick={(e) => onNavigation("foods", e)}>
+            Foods
+          </a>
         </div>
         <div className="button-box custom-button">
-          <a href="/Schedule.html">Seminar Schedule</a>
+          <a href="/Schedule.html" onClick={(e) => onNavigation("schedule", e)}>
+            Seminar Schedule
+          </a>
         </div>
         <div className="button-box custom-button">
-          <a href="/Signup.html">Signup</a>
+          <a href="/Signup.html" onClick={(e) => onNavigation("signup", e)}>
+            Signup
+          </a>
         </div>
         <div className="button-box custom-button">
-          <a href="/Login.html">Signin</a>
+          <a href="/Login.html" onClick={(e) => onNavigation("login", e)}>
+            Signin
+          </a>
         </div>
       </div>
 
@@ -181,7 +193,6 @@ function HomePage() {
       </main>
 
       {/* Footer section with site links, terms, and contact info */}
-   
     </>
   );
 }

@@ -8,7 +8,7 @@ import FoodsPage from "./components/FoodsPage";
 import Footer from "./components/Footer";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("");
+  const [currentPage, setCurrentPage] = useState("home");
   const [currentLayout, setCurrentLayout] = useState("");
   const [floatStyle, setFloatStyle] = useState("");
   const [layoutName, setLayoutName] = useState("");
@@ -18,7 +18,7 @@ function App() {
   };
 
   function handleChangeLayout(value) {
-    setCurrentPage("Foods");
+    setCurrentPage("foods");
     if (value === "flex-layout") {
       setCurrentLayout(value);
       setLayoutName("Flexbox Sidebar");
@@ -51,9 +51,9 @@ function App() {
           </li>
           <li>
             <a
-              className={currentPage === "Foods" && "active"}
+              className={currentPage === "foods" && "active"}
               href="foods"
-              onClick={(e) => handleNavigation("Foods", e)}
+              onClick={(e) => handleNavigation("foods", e)}
             >
               Foods
             </a>
@@ -73,7 +73,7 @@ function App() {
             <a
               href="foods"
               className="dropbtn"
-              onClick={(e) => handleNavigation("Foods", e)}
+              onClick={(e) => handleNavigation("foods", e)}
             >
               Layout Design
             </a>
@@ -110,7 +110,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      {currentPage === "Foods" && (
+      {currentPage === "foods" && (
         <FoodsPage
           currentLayout={currentLayout}
           setCurrentLayout={setCurrentLayout}
@@ -120,8 +120,9 @@ function App() {
           setLayoutName={setLayoutName}
         />
       )}
-      {currentPage === "home" && <HomePage />}
-      {currentPage === "" && <HomePage />}
+      {currentPage === "home" && (
+        <HomePage onNavigation={handleNavigation} />
+      )}
       {currentPage === "schedule" && <Schedule />}
       {currentPage === "signup" && <Signup />}
       {currentPage === "login" && <Login />}
