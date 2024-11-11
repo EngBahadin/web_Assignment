@@ -1,38 +1,578 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background: #eeeeee;
+  padding: 30px 30px;
+  padding-left: 120px;
+  border-top: 20px solid #005f6b;
+  border-radius: 5px 5px 0 0;
+}
+
+header h1 {
+  position: relative;
+  color: #764b0a;
+}
+
+header h1::after,
+header h1::before {
+  content: " ";
+  position: relative;
+  margin-right: 20px;
+  float: left;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 4px double #005f6b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px inset #005f6b;
+}
+
+header h1::after {
+  position: absolute;
+  left: 0;
+  transform: rotateZ(45deg);
+}
+
+nav {
+  background:#7c4d06;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 20px 0;
+  list-style-type: none;
+  display: flex;
+  padding-left: 60px;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  transition: color 0.5s, background 0.5s;
+}
+
+nav ul li a:hover {
+  color: orange;
+}
+
+nav ul li a.active {
+  color: orange;
+  border-bottom: 4px solid orange;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+color: white;
+padding: 16px;
+cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.dropdown-content p {
+  color: #764b0a;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content p:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* carousel of home pagee */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  background-color: #8e5c11;
+  margin-top: 40px;
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.carousel-item img {
+  object-fit: contain;
+  width: 500px;
+  height: 300px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.carousel-control-prev > span,
+.carousel-control-next > span {
+  font-size: x-large;
+}
+.carousel-control-prev > span:hover,
+.carousel-control-next > span:hover {
+  color: #cb8c2d;
+  transition: color 0.3s;
+  font-size: xx-large;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #4c4c4d;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  margin: 10px;
+  flex-direction: row;
+}
+
+.custom-button {
+  padding: 1rem;
+  font-weight: bold;
+  border: 2px solid #8e5c11;
+  transition: all 0.7s;
+  display: inline-block;
+}
+
+.custom-button:hover {
+  box-shadow: 0px 4px 6px rgba(133, 86, 58, 0.8);
+  border-color: #764b0a;
+  transform: rotate(-20deg);
+}
+
+.button-box a {
+  padding: 90px;
+  text-decoration: none;
+  color: #8e5c11;
+  font-weight: bold;
+}
+
+.button-box:hover {
+  color: #a46c17;
+}
+
+.button-box:hover a {
+  color: #a97220;
+}
+
+main {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+div > span {
+  display: block;
+}
+
+/* for image with paragraph in both places home page and foods page  */
+
+.float1,
+.float3 {
+  float: left;
+  padding-right: 10px;
+  height: 150px;
+  width: 300px;
+  background-color: #8e5c11;
+  margin: 10px;
+}
+
+.float2,
+.float4 {
+  float: right;
+  padding-left: 10px;
+  height: 150px;
+  width: 300px;
+  background-color: #8e5c11;
+  margin: 10px;
+}
+
+.recent-article-header {
+  text-align: center;
+  color: #764b0a;
+  font-weight: 800;
+  padding: 10px;
+}
+
+.recent-article-header:hover {
+  cursor: pointer;
+  color: #935e0f;
+}
+
+
+
+
+
+
+
+img{
+  object-fit: contain;
+}
+
+
+
+
+/* goods page  */
+
+.food-header {
+  font-weight: 600;
+  width: fit-content;
+}
+.layout-container > * {
+  overflow: hidden;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+.float-bottom {
+  float: top;
+  padding-right: 10px;
+  height: 250px;
+  width: 100%;
+  background-color: #8e5c11;
+  margin: 10px 0px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.layout-box-design {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 2px;
+  border-top: 4px solid rgb(255, 128, 0);
+  background-color: rgb(250, 222, 192);
+  padding: 10px;
+  width: 400px;
+}
+.layout-box-design > h3 {
+  color: #0288d1;
+  font-weight: bold;
+  padding: 10px;
+}
+.layout-box-design > ul {
+  list-style-type: none;
+  padding: 0;
+  color: #0288d1;
+}
+.layout-box-design > ul > li {
+  font-size: 14px;
+  padding: 7px 0px;
+  cursor: pointer;
+}
+.flex-layout > div > {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+/* Schedule Page Specific Styles */
+.page-container {
+  width: 100%;
+  padding: 100px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-title {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.schedule-table {
+  width: 90%;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #e0f7fa, #ffe0b2);
+}
+.schedule-table th,
+.schedule-table td {
+  padding: 12px;
+  border: 2px solid #00838f;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.schedule-table thead th {
+  background-color: #b2ebf2;
+  color: #006064;
+  font-weight: bold;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: #f0f4c3;
+}
+
+.day-column {
+  font-weight: bold;
+}
+
+
+
+
+
+
+/* sign up page styles */
+.signup-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.signup-form h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+.signup-form input[type="color"] {
+  border-bottom: 2px solid #086e5d;
+  border-left: 1px solid #004d40;
+  border-right: 1px solid #004d40;
+  border-top: 1px solid #004d40;
+  border-radius: 5px 5px 1px 1px;
+  background-color: rgb(242, 232, 233);
+  width: 100%;
+
+  margin-bottom: 10px;
+}
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form input[type="password"],
+.signup-form input[type="date"],
+.signup-form textarea,
+.signup-form select {
+  border-bottom: 2px solid #086e5d;
+  border-left: 1px solid #004d40;
+  border-right: 1px solid #004d40;
+  border-top: 1px solid #004d40;
+  border-radius: 5px 5px 1px 1px;
+  background-color: rgb(242, 232, 233);
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.signup-form fieldset {
+  border-bottom: 2px solid #004d40;
+  border-left: 1px solid #004d40;
+  border-right: 1px solid #004d40;
+  border-top: 1px solid #004d40;
+  border-radius: 5px 5px 1px 1px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.signup-form legend {
+  font-weight: 500;
+}
+
+.signup-form button {
+  width: 18%;
+  padding: 10px;
+  margin: 10px 1%;
+  background-color: #fbfdfd;
+  color: #004d40;
+  border: 2px solid #004d40;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form button[type="reset"] {
+  color: #0e0e0e;
+  background-color: #e74d3c33;
+  border: 2px solid#e74c3c;
+  border-radius: 4px;
+}
+
+.signup-form button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+/* sign in page styles */
+.signin-form {
+  max-height: 1200px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+h2 {
+  padding-left: 100px;
+  text-align: left;
+}
+
+.signin-form form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.signin-form label {
+  margin: 10px 0 5px;
+}
+
+.signin-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #004d40;
+  border-left: 1px solid #004d40;
+  border-right: 1px solid #004d40;
+  border-top: 1px solid #004d40;
+  border-radius: 5px 5px 1px 1px;
+  padding: 10px;
+  background-color: rgb(247, 235, 237);
+}
+
+.signin-form a {
+  color: #005f6b;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.signin-form button {
+  width: 18%;
+  padding: 10px;
+  margin: 10px 1%;
+  background-color: #f3ecf1;
+  color: #004d40;
+  border: 2px solid #004d40;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signin-form button:hover {
   color: white;
+  background-color: #003f4b;
+  border: 2px solid #003f4b;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+/* footer of the Project */
+footer {
+  border-top: 10px solid orange;
+  display: flex;
+  justify-content: space-around;
+  background-color: #005f6b;
+  color: white;
+  padding: 20px 0;
+  text-align: left;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-section h3 {
+  padding-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section p {
+  margin: 10px 0;
 }
